@@ -1,3 +1,9 @@
+- CSS file does not exit in the started kit so we need to add the `main.css` file if we want to have a main CSS file at `./assets/css/main.css` and also set the main file in `nuxt.config.js`:
+  ```javascript
+  css: ["~/assets/css/main.css"];
+  ```
+- To use the router we need to create the directory and add `<NuxtPage />` in `App.vue` and set `pages: true` in the `nuxt.config.ts`.
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
