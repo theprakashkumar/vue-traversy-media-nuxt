@@ -4,6 +4,14 @@
   ```
 - To use the router we need to create the directory and add `<NuxtPage />` in `App.vue` and set `pages: true` in the `nuxt.config.ts`.
 
+- To have layouts first we need to create a `layouts` folder then in there we can create files like `default.vue` and have our default layout elements in this file we also need to create `<slot />` where the route element will get rendered. In the route element we need to set the layout for that specific route by:
+  ```javascript
+  definePageMeta({
+    layout: "default",
+  });
+  ```
+  We can define multiple layout and set them for specific page.
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

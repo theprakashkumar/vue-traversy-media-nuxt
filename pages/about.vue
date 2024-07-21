@@ -1,3 +1,8 @@
+<script setup>
+definePageMeta({
+  layout: "custom",
+});
+</script>
 <template>
-  <div>hello</div>
+  <h1>hello</h1>
 </template>
