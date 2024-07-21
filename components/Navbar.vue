@@ -11,36 +11,35 @@ import { isActiveLink } from "@/utils/links";
           class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
         >
           <!-- Logo -->
-          <a class="flex flex-shrink-0 items-center mr-4" href="index.html">
-            <!-- <img class="h-10 w-auto" v-bind:src="logo" alt="Vue Jobs" /> -->
-            <span class="hidden md:block text-white text-2xl font-bold ml-2"
+          <NuxtLink class="flex flex-shrink-0 items-center mr-4" to="/"
+            ><span class="hidden md:block text-white text-2xl font-bold ml-2"
               >Vue Jobs</span
-            >
-          </a>
+            ></NuxtLink
+          >
           <div class="md:ml-auto">
             <div class="flex space-x-2">
-              <RouterLink
+              <NuxtLink
                 to="/"
                 :class="`text-white ${
                   isActiveLink('/')
                     ? 'bg-green-900'
                     : 'hover:bg-gray-900 hover:text-white'
                 } rounded-md px-3 py-2`"
-                >Home</RouterLink
+                >Home</NuxtLink
               >
-              <RouterLink
+              <NuxtLink
                 to="/jobs"
                 :class="`text-white ${
                   isActiveLink('/jobs')
                     ? 'bg-green-900'
                     : 'hover:bg-gray-900 hover:text-white'
                 } rounded-md px-3 py-2`"
-                >Jobs</RouterLink
+                >Jobs</NuxtLink
               >
-              <RouterLink
+              <NuxtLink
                 to="/job/add"
                 class="text-white hover:bg-green-900 hover:text-white rounded-md px-3 py-2"
-                >Add Job</RouterLink
+                >Add Job</NuxtLink
               >
             </div>
           </div>
