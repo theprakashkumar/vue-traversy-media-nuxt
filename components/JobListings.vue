@@ -22,15 +22,17 @@ defineProps({
           class="bg-white rounded-xl shadow-md relative"
         >
           <!-- Iterate over jobs array -->
-          <JobsCard
-            :id="job.id"
-            :type="job.type"
-            :title="job.title"
-            :description="job.description"
-            :salary="job.salary"
-            :location="job.location"
-            :company="job.company"
-          />
+          <NuxtLink :to="`job/${job.id}`">
+            <JobsCard
+              :id="job.id"
+              :type="job.type"
+              :title="job.title"
+              :description="job.description"
+              :salary="job.salary"
+              :location="job.location"
+              :company="job.company"
+            />
+          </NuxtLink>
         </div>
       </div>
     </div>
